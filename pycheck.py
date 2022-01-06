@@ -16,8 +16,8 @@ for zone in zones["result"]:
             try:
                 site = requests.get("http://"+dns["content"], headers={'Host': dns["name"]})
                 if(site.status_code != 403):
-                    logging.warning(dns["name"]+":Cloud Armor Disabled")
-                    print(dns["name"]+":Cloud Armor Disabled")
+                    logging.warning(dns["name"]+":Bypassed")
+                    print(dns["name"]+":Bypassed")
             except:
                 logging.warning(dns["name"]+":Error")
                 print(dns["name"]+":Error")
